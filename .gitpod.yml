@@ -1,10 +1,6 @@
-image:
-  # Use a base Gitpod image that includes common development tools
-  use: gitpod/workspace-full
-
 tasks:
   - init: |
-      # Install Go and MongoDB
+      # Update package list and install Go
       sudo apt-get update && sudo apt-get install -y golang mongodb
 
       # Start MongoDB service
@@ -14,7 +10,7 @@ tasks:
       go mod tidy
 
   - command: |
-      # Start the Go application
+      # Start the Go application server
       go run main.go
 
 ports:
