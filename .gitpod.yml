@@ -1,14 +1,18 @@
 tasks:
   - init: |
-      # Update package list and install Go
-      sudo apt-get update && sudo apt-get install -y golang mongodb
-
-      # Start MongoDB service
-      sudo service mongod start
+      # Install Docker
+      sudo apt-get update
+      sudo apt-get install -y docker.io
+      
+      # Start Docker service
+      sudo service docker start
+      
+      # Pull MongoDB Docker image and run it
+      sudo docker pull mongo
+      sudo docker run -d --name mongodb -p 27017:27017 mongo
 
       # Install Go dependencies
       go mod tidy
-
   - command: |
       # Start the Go application server
       go run main.go

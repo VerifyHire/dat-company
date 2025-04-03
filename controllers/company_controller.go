@@ -6,7 +6,6 @@ import (
 	"github.com/yourusername/go-microservice/db"
 	"github.com/yourusername/go-microservice/models"
 	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"net/http"
 )
