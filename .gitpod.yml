@@ -1,8 +1,12 @@
 image:
+  # Define the image to use for Gitpod, this can use a custom Dockerfile
   file: .gitpod.Dockerfile
 
 tasks:
+  # Initialization task to run Go mod tidy
   - init: go mod tidy
+
+  # Command to start the Go application
   - command: |
       go run main.go
   - open: http://localhost:8080
