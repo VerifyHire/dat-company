@@ -1,15 +1,21 @@
 image:
-  # Define the image to use for Gitpod, this can use a custom Dockerfile
-  file: .gitpod.Dockerfile
+  # Use a base Gitpod image that includes common development tools
+  use: gitpod/workspace-full
 
 tasks:
-  # Initialization task to run Go mod tidy
-  - init: go mod tidy
+  - init: |
+      # Install Go and MongoDB
+      sudo apt-get update && sudo apt-get install -y golang mongodb
 
-  # Command to start the Go application
+      # Start MongoDB service
+      sudo service mongod start
+
+      # Install Go dependencies
+      go mod tidy
+
   - command: |
+      # Start the Go application
       go run main.go
-  - open: http://localhost:8080
 
 ports:
   - port: 8080
