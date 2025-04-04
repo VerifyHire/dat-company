@@ -5,7 +5,7 @@ import (
 	"github.com/yourusername/go-microservice/controllers"
 )
 
-// SetupRoutes sets up all the routes for the company API
+// SetupRoutes sets up all the routes for the company API ---
 func SetupRoutes(r *gin.Engine) {
 	r.GET("/companies", controllers.GetCompanies)
 	r.POST("/companies", controllers.CreateCompany)
