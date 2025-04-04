@@ -12,7 +12,7 @@ var CompanyCollection *mongo.Collection
 
 // SetupDatabase initializes the MongoDB client and collection
 func SetupDatabase() {
-	clientOptions := options.Client().ApplyURI("mongodb://localhost:27017")
+	clientOptions := options.Client().ApplyURI("mongodb+srv://iamviqar:Mva786@verifyhire.outzf6f.mongodb.net/?retryWrites=true&w=majority&appName=verifyhire")
 	client, err := mongo.Connect(context.Background(), clientOptions)
 	if err != nil {
 		log.Fatal(err)
