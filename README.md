@@ -48,6 +48,8 @@ flowchart TD
     C --> D[Database]
 
 
+
+```mermaid
 flowchart TD
     A([<i class="fa fa-user"></i> Client Browser]) -->|HTTP Request| B([<i class="fa fa-server"></i> Web Server])
     B -->|API Call| C([<i class="fa fa-cogs"></i> Application Server])
