@@ -40,3 +40,9 @@ flowchart TD
     A[GET /companies] --> B[POST /companies]
     B --> C[PUT /companies/:id]
     C --> D[DELETE /companies/:id]
+
+
+flowchart TD
+    A[Client Browser] --> B[Web Server]
+    B --> C[Application Server]
+    C --> D[Database]
